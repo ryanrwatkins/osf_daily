@@ -3,7 +3,7 @@ import json
 import requests 
 import os
 
-SECRET = os.environ["SECRET"]
+SECRET = os.environ[SECRET]
 
 # you can install langdetect in your environment, or you can !PIP install each time the script runs (once a day). For Deepnote I installed in the environment with a requirements.txt file. 
 #This will be used to check the article description to see if it is in English.
