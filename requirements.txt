@@ -1,1 +1,6 @@
 langdetect
+requests
+json
+os
+datetime
+smtplib
