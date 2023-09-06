@@ -6,6 +6,7 @@ name: Run Python application
 on:
   schedule:
     - cron:  '0 8 * * *'
+# https://www.python-engineer.com/posts/run-python-github-actions/
 
 jobs:
   build:
@@ -24,6 +25,6 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: execute py script
       env:
-        SOME_SECRET: ${{ secrets.gmail_pw }}
+        SECRET: ${{ secrets.gmail_pw }}
       run: |
         python osf_daily.py
