@@ -5,7 +5,7 @@ name: Run Python application
 
 on:
   schedule:
-    - cron:  '45 13 * * *'
+    - cron:  '0 14 * * *'
 # https://www.python-engineer.com/posts/run-python-github-actions/
 
 jobs:
