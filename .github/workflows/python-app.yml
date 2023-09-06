@@ -25,6 +25,6 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: execute py script
       env:
-        SECRET: ${{ secrets.gmail_pw }}
+        SECRET: ${{ secrets.GMAIL_PW }}
       run: |
         python osf_daily.py
