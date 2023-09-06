@@ -57,7 +57,7 @@ from email.mime.text import MIMEText
 
 # Set Global Variables
 gmail_user = 'ryanrwatkins@gmail.com'  
-gmail_password = config.password    #this is an app password not your personal password, instructions for setting this up are found at: https://support.google.com/accounts/answer/185833?hl=en
+gmail_password = ${{ secrets.gmail_pw }}    #this is an app password not your personal password, instructions for setting this up are found at: https://support.google.com/accounts/answer/185833?hl=en
 
 # to and from
 mail_from = gmail_user
