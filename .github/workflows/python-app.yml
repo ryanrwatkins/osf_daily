@@ -25,7 +25,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: execute py script
       env:
-        SECRET: ${{ secrets.GMAIL_PW }}
+        SECRET_GMAIL_PW: ${{ secrets.GMAIL_PW }}
         SECRET_GMAIL: ${{ secrets.EMAIL_ADDRESS }}
         SECRET_EMAIL: ${{ secrets.GMAIL_ADDRESS }}
         SECRET_RSS: ${{ secrets.RSS_URL }}
