@@ -3,7 +3,10 @@ import json
 import requests 
 import os
 
-SECRET = os.environ["SECRET"]
+gmail_pw = os.environ["SECRET"]
+gmail_address = os.environ["GMAIL_ADDRESS"]
+email_address = os.environ["EMAIL_ADDRESS"]
+rss_url = os.environ["RSS_URL"]
 
 # you can install langdetect in your environment, or you can !PIP install each time the script runs (once a day). For Deepnote I installed in the environment with a requirements.txt file. 
 #This will be used to check the article description to see if it is in English.
@@ -59,14 +62,14 @@ import smtplib
 from email.mime.text import MIMEText
 
 # Set Global Variables
-gmail_user = 'ryanrwatkins@gmail.com'  
-gmail_password = SECRET   
+gmail_user = gmail_address  
+gmail_password = gmail_pw   
 
 # this is an app password not your personal password, instructions for setting this up are found at: support.google.com/accounts/answer/185833?hl=en
 
 # to and from
 mail_from = gmail_user
-mail_to = ['wn2vf2q2e0p6ucm8@kill-the-newsletter.com', 'rwatkins@email.com']  #the first email address creates an RSS feed using https://kill-the-newsletter.com/
+mail_to = [rss_url, email_address]  #the first email address creates an RSS feed using https://kill-the-newsletter.com/
 
 # create message
 msg = MIMEText(todays_articles, 'html') 
