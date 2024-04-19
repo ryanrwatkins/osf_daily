@@ -3,10 +3,10 @@ import json
 import requests 
 import os
 
-gmail_pw = os.environ["SECRET"]
-gmail_address = os.environ["GMAIL_ADDRESS"]
-email_address = os.environ["EMAIL_ADDRESS"]
-rss_url = os.environ["RSS_URL"]
+gmail_pw = os.environ["SECRET_GMAIL_PW"]
+gmail_address = os.environ["SECRET_GMAIL"]
+email_address = os.environ["SECRET_EMAIL"]
+rss_url = os.environ["SECRET_RSS"]
 
 # you can install langdetect in your environment, or you can !PIP install each time the script runs (once a day). For Deepnote I installed in the environment with a requirements.txt file. 
 #This will be used to check the article description to see if it is in English.
