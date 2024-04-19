@@ -26,5 +26,8 @@ jobs:
     - name: execute py script
       env:
         SECRET: ${{ secrets.GMAIL_PW }}
+        SECRET_GMAIL: ${{ secrets.EMAIL_ADDRESS }}
+        SECRET_EMAIL: ${{ secrets.GMAIL_ADDRESS }}
+        SECRET_RSS: ${{ secrets.RSS_URL }}
       run: |
         python osf_daily.py
